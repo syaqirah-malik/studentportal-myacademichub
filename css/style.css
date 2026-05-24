@@ -1,0 +1,87 @@
+:root {
+    /* Use the Refined Deep Corportate Blue Theme Tokens */
+    --primary-color: #1e3a8a; 
+    --primary-hover: #2563eb;
+    --bg-light: #f8f9fa;
+    --text-dark: #212529;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar Custom Structural Styling (not using the automatic colour suggested) */
+.navbar-custom {
+    background-color: var(--primary-color) !important;
+}
+
+.navbar-custom .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    transition: all 0.2s ease;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-custom .nav-link.active, 
+.navbar-custom .nav-link:hover {
+    color: #ffffff !important;
+    background-color: var(--primary-hover) !important;
+    border-radius: 4px;
+}
+
+/* --- Drop Down List Background Colour --- */
+.navbar-custom .dropdown-menu {
+    background-color: #ffffff !important;
+    border: none;
+}
+
+/* The initial text colour of dropdown list before hover */
+.navbar-custom .dropdown-item {
+    color: var(--text-dark) !important;
+    transition: all 0.2s ease;
+}
+
+/* Change the text colour of & also the background colour when the dropdown button is being-hovered */
+.navbar-custom .dropdown-item:hover {
+    background-color: var(--primary-hover) !important;
+    color: #ffffff !important;
+}
+
+/* Dark Mode Dropdown Support */
+[data-bs-theme="dark"] .navbar-custom .dropdown-menu {
+    background-color: #1e293b !important;
+}
+[data-bs-theme="dark"] .navbar-custom .dropdown-item {
+    color: #f8f9fa !important;
+}
+[data-bs-theme="dark"] .navbar-custom .dropdown-item:hover {
+    background-color: #3b82f6 !important;
+}
+
+
+/* Dashboard Component Refinement Links */
+.card-summary-val {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Adaptive Light Blue Header Striping for Tables (in results.php) */
+.table-header-custom {
+    background-color: #eff6ff !important; /* Soft ice blue highlight */
+    color: var(--primary-color) !important;
+}
+
+/* Native Bootstrap 5 Dark Mode Template Variant Overrides */
+[data-bs-theme="dark"] .table-header-custom {
+    background-color: #1e293b !important; /* Deep charcoal slate for dark tables */
+    color: #3b82f6 !important;
+}
+
+[data-bs-theme="dark"] .card-summary-val {
+    color: #3b82f6;
+}
